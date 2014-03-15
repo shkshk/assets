@@ -1,0 +1,46 @@
+#topnav
+  position: absolute
+  top: 1em
+  left: 0
+  right: 0
+  height: 40px
+  overflow: hidden
+  padding: 0 1em
+  z-index: 9999
+
+  .logo
+    float: left
+
+    img
+      height: 40px
+      width: 57px
+
+  .tiny-primary-btn
+    float: right
+
+  .tiny-primary-btn, .tiny-primary-btn:active, .tiny-primary-btn:visited
+    display: inline-block
+    padding: 5px 1.3em 6px
+    margin: 2px 0
+    font-size: 87.5%
+    font-weight: 400
+    color: #f0f0f0
+    background: transparent
+    border: 2px solid #f0f0f0
+    transition: color 0.4s, border-color 0.4s
+
+    &:hover, &:active
+      background: transparent!important
+      color: #fff
+      border-color: #fff
+
+body.is-dimmed #topnav
+  display: none
+
+body.layout--main
+  #topnav .logo
+    opacity: .5
+    transition: opacity 0.4s
+
+    &:hover
+      opacity: 1
