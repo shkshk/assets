@@ -9,7 +9,7 @@
   .payment-and-delivery, .made-personally, .made-with-love
     max-width: 540px
 
-@media (max-width: 767px)
+@media $tablet
   body
     font-size: 14px
 
@@ -20,25 +20,12 @@
   .made-personally__contents, .made-with-love__contents
     font-size: 1em
 
-  #topnav
-    .tiny-primary-btn
-      margin: 4px 0 3px
-
-@media (max-width: 600px)
+@media $ereader
   .welcome-brand
     border: none
     width: auto
 
-  #topnav
-    .tiny-primary-btn
-      border-radius: 0
-      border-width: 0
-      padding: 0
-      margin: 0
-      line-height: 36px
-      text-decoration: underline
-
-@media (max-width: 480px)
+@media $mobile
   body
     padding-bottom: 1em
 
@@ -51,16 +38,6 @@
 
     .scroll-more
       display: none
-
-  #topnav
-    height: 28px
-
-    .logo img
-      width: 34px
-      height: 24px
-
-    .tiny-primary-btn
-      line-height: 28px
 
   #footer
     margin-top: 3em

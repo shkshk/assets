@@ -6,40 +6,6 @@ input
   &.placeholder
     color: #666
 
-.btn, .btn:visited, .btn:hover
-  display: inline-block
-  -moz-appearance: none
-  -webkit-appearance: none
-  appearance: none
-  font-size: 125%
-  font-weight: 300
-  border: none
-  color: #fff
-  background: $stripe-color-blue
-  padding: .5em 1em .55em
-  border-radius: 6px
-  transition: background 0.4s
-  cursor: pointer
-  zoom: 1
-  text-decoration: none
-
-.btn
-  &:hover
-    cursor: pointer
-    background: lighten($stripe-color-blue, 10%)
-
-  &:active
-    background: darken($stripe-color-blue, 10%)
-
-  // ie8
-  &[disabled]
-    cursor: not-allowed
-    background: lighten($stripe-color-blue, 65%)
-
-  &:disabled, &.disabled
-    cursor: not-allowed
-    background: lighten($stripe-color-blue, 65%)
-
 .order-form
   overflow: hidden
 

@@ -9,13 +9,13 @@ body
   font-stretch: normal
   -webkit-text-size-adjust: none
 
-a:link
+a
   color: $link-color
   text-decoration: none
 
-a:visited
-  color: $link-visited-color
+  &:visited
+    color: $link-visited-color
 
-a:hover, a:active
-  color: $link-hover-color
-  text-decoration: none
+  &:hover, &:active
+    color: $link-hover-color
+    text-decoration: none
