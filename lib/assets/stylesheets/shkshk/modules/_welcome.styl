@@ -1,5 +1,28 @@
-.welcome-fotorama.fotorama
-  background: #d6cab7
+.welcome
+  background-color: #d6cab7
+  background-size: cover
+  background-position: center center
+  overflow: hidden
+
+.welcome-scroll_more
+   display: none
+   position: absolute
+   bottom: -40px
+   left: 50%
+   margin-left: -8px
+   height: 16px
+   width: 16px
+   border: 3px solid rgba(255, 255, 255, .45)
+   border-width: 0 0 3px 3px
+   transform: rotate(-45deg)
+   transition: border-color, 0.4s
+
+   &:hover
+     cursor: pointer
+     border-color: rgba(255, 255, 255, .9)
+
+   .cover-image-is-too-high &
+     display: block
 
 .welcome-brand
   position: relative
@@ -10,30 +33,23 @@
   color: $light-text-color
   border: 6px solid $light-text-color
 
-  .scroll-more
-    display: none
-    position: absolute
-    bottom: -40px
-    left: 50%
-    margin-left: -8px
-    height: 16px
-    width: 16px
-    border: 3px solid rgba(255, 255, 255, .45)
-    border-width: 0 0 3px 3px
-    transform: rotate(-45deg)
-    transition: border-color, 0.4s
-
-    &:hover
-      cursor: pointer
-      border-color: rgba(255, 255, 255, .9)
-
-    .cover-image-is-too-high &
-      display: block
-
   h2
     margin: 0 0 1em
     font: normal normal 3.5em/1 $serif
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .2)
+
+  @media $ereader
+    &
+      border: none
+      width: auto
+
+  @media $mobile
+    &
+      border: none
+      font-size: 87.5%
+
+      h2
+        font-size: 2.5em
 
   p
     position: relative
