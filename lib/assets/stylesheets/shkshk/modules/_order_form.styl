@@ -1,0 +1,42 @@
+.order_form
+  overflow: hidden
+
+  .price
+    background: #fefef0
+    padding: 1px 2px 2px
+    border-radius: 3px
+
+  &-notice
+    width: 47%
+    float: left
+
+  &-title
+    margin-bottom: 1em
+
+  &-help
+    display: block
+    font-size: 12px
+    line-height: 16px
+    color: lighten($text-color, 10%)
+
+  &-submits
+    padding: .5em 0 0
+    text-align: right
+
+  &-form
+    width: 50%
+    float: right
+
+    div
+      margin: 0 0 1em
+
+    input[type="text"]
+      box-sizing: border-box
+      width: 100%
+
+  @media $low-desktop
+    &-notice, &-form
+      float: none
+      width: auto
+      max-width: 540px
+      margin: 0 auto
