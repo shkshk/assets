@@ -1,6 +1,8 @@
-# ShkshkAssets
+# *.shkshk.ru assets: images, styles and scripts
 
-*.shkshk.ru images, styles and scripts.
+* uses MVCSS for stylesheets
+* requires jquery
+* includes jquery.smoothscroll, jquery.fancybox, jquery.placeholder and HeroCover
 
 ## Installation
 
