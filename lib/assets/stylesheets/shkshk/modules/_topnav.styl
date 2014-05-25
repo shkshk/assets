@@ -1,0 +1,75 @@
+.topnav
+  position: absolute
+  top: 1em
+  left: 0
+  right: 0
+  height: 40px
+  overflow: hidden
+  padding: 0 1em
+  z-index: 9999
+
+  .is-dimmed &
+    display: none
+
+  @media $mobile
+    &
+      height: 28px
+
+.topnav-logo
+  float: left
+
+  .layout--main &
+    opacity: .5
+    transition: opacity 0.4s
+
+    &:hover
+      opacity: 1
+
+  img
+    height: 40px
+    width: 57px
+
+    @media $mobile
+      &
+        width: 34px
+        height: 24px
+
+.topnav-primary_btn
+  @extend .btn
+
+  float: right
+  display: inline-block
+
+  &, &:active, &:visited
+    float: right
+    display: inline-block
+    padding: 5px 1.3em 6px
+    margin: 2px 0
+    font-size: 87.5%
+    font-weight: 400
+    color: #f0f0f0
+    background: transparent
+    border: 2px solid #f0f0f0
+    transition: color 0.4s, border-color 0.4s
+
+  &:hover, &:active
+    background: transparent!important
+    color: #fff
+    border-color: #fff
+
+  @media $tablet
+    &
+      margin: 4px 0 3px
+
+  @media $ereader
+    &
+      border-radius: 0
+      border-width: 0
+      padding: 0
+      margin: 0
+      line-height: 36px
+      text-decoration: underline
+
+  @media $mobile
+    &
+      line-height: 28px
