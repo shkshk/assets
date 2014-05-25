@@ -1,9 +1,10 @@
-// Relies on #main-cover-image with the following inline js (right after #main-cover-image):
+// Relies on #main-cover-image with the following inline js (right after `#main-cover-image`):
 //
 //     var coverHeight = Math.floor(document.documentElement.clientWidth / 1.56);
 //     document.getElementById('main-cover-image').style.height = coverHeight + 'px';
 //
-// Where 1.56 is image aspect ratio
+// Where 1.56 is image aspect ratio which should be also specified
+// as `data-ratio` attribute of `#main-cover-image`
 
 .hero_cover
   background-color: #d6cab7
