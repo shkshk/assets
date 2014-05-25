@@ -1,6 +1,7 @@
 //= require jquery.smooth-scroll
 //= require jquery.placeholder
 //= require jquery.fancybox
+//= require jquery.debouncedresize
 //= require_tree ./modules
 
 $ ->
