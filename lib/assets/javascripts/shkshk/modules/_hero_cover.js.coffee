@@ -2,7 +2,7 @@ class HeroCover
   constructor: (@$el) ->
     @_bindEvents()
 
-  recalculateBodyClass: ->
+  recalculateBodyClass: =>
     if $(window).height() < @$el.height()
       $('body').addClass('cover-image-is-too-high')
     else
@@ -14,12 +14,11 @@ class HeroCover
     @$el.css(height: newHeigth)
 
   _bindEvents: ->
+    $(document).on('ready', @recalculateBodyClass)
     $(window).on('debouncedresize', @_handleWindowResize)
 
   _handleWindowResize: =>
     @resizeCoverImage()
     @recalculateBodyClass()
 
-$ ->
-  @hero_cover = new HeroCover($('#main-cover-image'))
-  @hero_cover.recalculateBodyClass()
+new HeroCover($('#main-cover-image'))
