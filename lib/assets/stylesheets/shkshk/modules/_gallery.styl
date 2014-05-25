@@ -17,8 +17,9 @@
     display: block
     max-width: 100%
 
-  li:first-child
+  li:first-child, li:first-child + li
     max-width: 50%
 
-  li:first-child + li
-    max-width: 50%
+  &--short
+    li:first-child, li:first-child+li
+      max-width: 33%
