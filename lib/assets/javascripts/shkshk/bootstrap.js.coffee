@@ -1,7 +1,7 @@
 //= require jquery.smooth-scroll
 //= require jquery.placeholder
 //= require jquery.fancybox
-//= require_tree modules
+//= require_tree ./modules
 
 $ ->
   $('input[placeholder]').placeholder()
