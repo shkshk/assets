@@ -1,0 +1,33 @@
+// Relies on #main-cover-image with the following inline js (right after `#main-cover-image`):
+//
+//     var coverHeight = Math.floor(document.documentElement.clientWidth / 1.56);
+//     document.getElementById('main-cover-image').style.height = coverHeight + 'px';
+//
+// Where 1.56 is image aspect ratio which should be also specified
+// as `data-ratio` attribute of `#main-cover-image`
+
+.hero_cover
+  background-color: #d6cab7
+  background-size: cover
+  background-position: center center
+  overflow: hidden
+
+.hero_cover-scroll_more
+   display: none
+   position: absolute
+   bottom: -40px
+   left: 50%
+   margin-left: -.5em
+   height: 1em
+   width: 1em
+   border: 4px solid #fff
+   border-width: 0 0 4px 4px
+   transform: rotate(-45deg)
+   transition: border-color, 0.4s
+
+   &:hover, &:active
+     cursor: pointer
+     border-color: $stripe-color-red
+
+   .cover-image-is-too-high &
+     display: block
