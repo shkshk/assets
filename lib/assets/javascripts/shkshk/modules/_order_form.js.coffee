@@ -1,11 +1,13 @@
 $ ->
-  $('.order_form-form input:submit').attr('disabled', true)
+  $submitBtn = $('.order_form-form input:submit')
+  $submitBtn.attr('disabled', true)
 
-  $('.order_form-form').on('keyup', 'input:text', ->
-    $submitBtn = $('.order_form-form input:submit')
+  $orderName = $('#order-name')
+  $orderContact = $('#order-contact')
 
-    if $.trim($('#order-name').val()).length && $.trim($('#order-contact').val()).length
+  setInterval(->
+    if $.trim($orderName.val()).length && $.trim($orderContact.val()).length
       $submitBtn.attr('disabled', false)
     else
       $submitBtn.attr('disabled', true)
-  )
+  , 1000)
